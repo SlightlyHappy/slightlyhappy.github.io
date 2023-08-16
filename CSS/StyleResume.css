@@ -7,3 +7,37 @@ body{
 p a{
     color:beige !important;
 }
+
+/* Style for the container */
+.container {
+    position: relative;
+    min-height: 100vh; /* Ensure the container is at least the height of the viewport */
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Style for the content */
+.content {
+    flex: 1; /* Allow content to expand and take available space */
+  }
+
+/* Style for the footer */
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1px;
+    position: relative;
+    bottom: 0;
+  }
+  
+  /* Style for the home page link */
+  .footer a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  /* Change link color on hover */
+  .footer a:hover {
+    color: #ff9900;
+  }
