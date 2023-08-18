@@ -66,10 +66,10 @@ body {
     z-index: -1;
     background: linear-gradient(
       to bottom right,  
-      #2C3E50, #FD746C, 
-      #FF8235, #ffff1c, 
-      #92FE9D, #00C9FF, 
-      #a044ff, #e73827
+      #2C3E50, #605B56, 
+      #837A75, #4D6A6D, 
+      #735751, #172A3A, 
+      #230c33, #DAD2BC
     );
     background-repeat: no-repeat;
     background-size: 1000% 1000%;
