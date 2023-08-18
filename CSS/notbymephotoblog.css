@@ -1,57 +1,83 @@
 body {
-    background: #131418;
-  }
-  
-  
-  /* Step 1: start with resetting some defaults */
-  
-  * {
+    min-height: 100vh;
+    position: relative;
+}
+
+/* Reset some defaults */
+* {
     margin: 0 auto;
     padding: 0;
     max-width: 100%;
-  }
-  
-  
-  /* Step 2: center things inside the grid and clear some space around it by setting a device based max-width and margin*/
-  
-  .grid {
+}
+
+/* Center things inside the grid */
+.grid {
     text-align: center;
     max-width: 95vw;
     margin: 2.5vw auto;
-  }
-  
-  
-  /* Step 3: how big should the gap be between grid items? remember that the total gap between two items would be double what you set here since both would have that amount set as their individual padding. Also add box-sizing:border-box to make sure the padding doesn't affect the total widh of the item */
-  
-  .grid-item {
+}
+
+.grid-item {
     padding: 5px;
     box-sizing: border-box;
-      display:inline;
-  }
-  
-  
-  /* Step 4: Add media queries (subjective) to make the whole grid resposive. */
-  
-  @media (min-width: 500px) {
+}
+
+/* Image zoom effect on hover */
+.grid-item img {
+    transition: transform 0.3s ease-in-out;
+}
+
+.grid-item img:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive grid */
+@media (min-width: 500px) {
     .grid-item {
-      width: 50%;
+        width: 50%;
     }
-  }
-  
-  @media (min-width: 1000px) {
+}
+
+@media (min-width: 1000px) {
     .grid-item {
-      width: 33.333%;
+        width: 33.333%;
     }
-  }
-  
-  @media (min-width: 1700px) {
+}
+
+@media (min-width: 1700px) {
     .grid-item {
-      width: 25%;
+        width: 25%;
     }
-  }
-  
-  @media (min-width: 2100px) {
+}
+
+@media (min-width: 2100px) {
     .grid-item {
-      width: 20%;
+        width: 20%;
     }
-  }
+}
+
+/* Background Animation CSS */
+.bgradient {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: linear-gradient(
+      to bottom right,  
+      #2C3E50, #FD746C, 
+      #FF8235, #ffff1c, 
+      #92FE9D, #00C9FF, 
+      #a044ff, #e73827
+    );
+    background-repeat: no-repeat;
+    background-size: 1000% 1000%;
+    animation: gradient 240s ease infinite;
+}
+
+@keyframes gradient { 
+    0%{background-position:0% 0%}
+    50%{background-position:100% 100%}
+    100%{background-position:0% 0%}
+}

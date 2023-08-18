@@ -1,57 +1,53 @@
 <html>
 
 <head>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
-<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-<link rel="stylesheet" href="../../CSS/notbymephotoblog.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <link rel="stylesheet" href="../../CSS/notbymephotoblog.css">
 </head>
 
 <body>
-<div class="grid">
+    <!-- Background Animation -->
+    <div class="bgradient"></div>
+    
+    <!-- Masonry Grid -->
+    <div class="grid"></div>
 
-  <div class="grid-item">
-    <img src="https://github.com/SlightlyHappy/slightlyhappy.github.io/blob/master/images/53CB254D-B0F0-4393-8183-EDCB1D1020D6-4714-00000062D78F194C.jpg?raw=true" />
-  </div>
+    <script>
+        const images = [
+            "https://github.com/SlightlyHappy/slightlyhappy.github.io/blob/master/images/53CB254D-B0F0-4393-8183-EDCB1D1020D6-4714-00000062D78F194C.jpg?raw=true",
+            "https://github.com/SlightlyHappy/slightlyhappy.github.io/blob/master/images/IMG_0674.JPG?raw=true",
+            "https://github.com/SlightlyHappy/slightlyhappy.github.io/blob/master/images/IMG_0947.JPG?raw=true",
+            "https://github.com/SlightlyHappy/slightlyhappy.github.io/blob/master/images/IMG_0956.JPG?raw=true",
+            "https://github.com/SlightlyHappy/slightlyhappy.github.io/blob/master/images/IMG_0982.JPG?raw=true",
+            "https://github.com/SlightlyHappy/slightlyhappy.github.io/blob/master/images/IMG_1065.JPG?raw=true",
+            "https://github.com/SlightlyHappy/slightlyhappy.github.io/blob/master/images/IMG_1106.JPG?raw=true",
+            "https://github.com/SlightlyHappy/slightlyhappy.github.io/blob/master/images/IMG_1240.PNG?raw=true"
+        ];
 
-  <div class="grid-item">
-    <img src="https://github.com/SlightlyHappy/slightlyhappy.github.io/blob/master/images/IMG_0674.JPG?raw=true">
-  </div>
+        function loadImages() {
+            const grid = document.querySelector('.grid');
+            images.forEach(imgSrc => {
+                const gridItem = document.createElement('div');
+                gridItem.classList.add('grid-item');
+                const img = document.createElement('img');
+                img.src = imgSrc;
+                gridItem.appendChild(img);
+                grid.appendChild(gridItem);
+            });
 
-  <div class="grid-item">
-    <img src="https://github.com/SlightlyHappy/slightlyhappy.github.io/blob/master/images/IMG_0947.JPG?raw=true">
-  </div>
+            // Masonry setup after images are loaded.
+            $(".grid").imagesLoaded(function() {
+                $(".grid").masonry({
+                    itemSelector: ".grid-item"
+                });
+            });
+        }
 
-  <div class="grid-item">
-    <img src="https://github.com/SlightlyHappy/slightlyhappy.github.io/blob/master/images/IMG_0956.JPG?raw=true" />
-  </div>
-
-
-  <div class="grid-item">
-    <img src="https://github.com/SlightlyHappy/slightlyhappy.github.io/blob/master/images/IMG_0982.JPG?raw=true" />
-  </div>
-
-  <div class="grid-item">
-    <img src="https://github.com/SlightlyHappy/slightlyhappy.github.io/blob/master/images/IMG_1065.JPG?raw=true" />
-  </div>
-
-  <div class="grid-item">
-    <img src="https://github.com/SlightlyHappy/slightlyhappy.github.io/blob/master/images/IMG_1106.JPG?raw=true" />
-  </div>
-
-  <div class="grid-item">
-    <img src="https://github.com/SlightlyHappy/slightlyhappy.github.io/blob/master/images/IMG_1240.PNG?raw=true" />
-  </div>
-
-</div>
-
-<script>
-$(".grid").imagesLoaded(function() {
-    $(".grid").masonry({
-      itemSelector: ".grid-item"
-    });
-  });
-</script>
+        // Load images into the grid when the document is ready.
+        document.addEventListener('DOMContentLoaded', loadImages);
+    </script>
 </body>
 
 </html>
