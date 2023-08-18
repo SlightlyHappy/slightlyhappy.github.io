@@ -14,7 +14,7 @@ main::before {
     right: 0;
     bottom: 0;
     background-size: cover;
-    animation: slideshow 300s infinite; 
+    animation: slideshow 86400s infinite; 
     z-index: -1; 
     opacity: 0; 
 }

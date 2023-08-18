@@ -9,7 +9,10 @@ document.addEventListener("DOMContentLoaded", function() {
       'https://c4.wallpaperflare.com/wallpaper/596/763/771/artwork-painting-nighthawks-edward-hopper-wallpaper-preview.jpg',
       'https://c4.wallpaperflare.com/wallpaper/567/290/398/vincent-van-gogh-classic-art-painting-flowers-wallpaper-preview.jpg',
       'https://c4.wallpaperflare.com/wallpaper/50/277/72/railway-train-station-painting-steam-locomotive-wallpaper-preview.jpg',
-      'https://i.redd.it/national-park-4k-3840x2160-by-a-i-v0-g4crddfnmt9a1.jpg?s=09b1d04542d7641ca8f15e7d41a4c8786926be97'
+      'https://i.redd.it/national-park-4k-3840x2160-by-a-i-v0-g4crddfnmt9a1.jpg?s=09b1d04542d7641ca8f15e7d41a4c8786926be97',
+      'https://i.redd.it/northern-lights-1920-1080-v0-x256oeqi9nib1.jpg?s=047872164fb4641722691fd4837c6b8e88cca7f6',
+      'https://i.redd.it/night-sky-forests-and-mountains-5952x3264-v0-drtekja8qmib1.jpg?s=0e450b40a2f68d98184986c7f90624eb776125ed',
+      'https://i.imgur.com/ezOgN0q.jpg',
     ];
 
     const keyframeDuration = 10;
