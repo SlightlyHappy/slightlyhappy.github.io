@@ -1,15 +1,57 @@
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dynamic Image Gallery</title>
-    <link rel="stylesheet" href="../../CSS/notbymephotoblog.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ev-emitter/1.1.1/ev-emitter.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/imagesloaded/4.1.4/imagesloaded.pkgd.min.js"></script>
-    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-    <script src="../../Javascript/notbymephotoblog.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+<link rel="stylesheet" href="../../CSS/notbymephotoblog.css">
 </head>
+
 <body>
-    <div id="gallery"></div>
+<div class="grid">
+
+  <div class="grid-item">
+    <img src="https://github.com/SlightlyHappy/slightlyhappy.github.io/blob/master/images/53CB254D-B0F0-4393-8183-EDCB1D1020D6-4714-00000062D78F194C.jpg?raw=true" />
+  </div>
+
+  <div class="grid-item">
+    <img src="https://github.com/SlightlyHappy/slightlyhappy.github.io/blob/master/images/IMG_0674.JPG?raw=true">
+  </div>
+
+  <div class="grid-item">
+    <img src="https://github.com/SlightlyHappy/slightlyhappy.github.io/blob/master/images/IMG_0947.JPG?raw=true">
+  </div>
+
+  <div class="grid-item">
+    <img src="https://github.com/SlightlyHappy/slightlyhappy.github.io/blob/master/images/IMG_0956.JPG?raw=true" />
+  </div>
+
+
+  <div class="grid-item">
+    <img src="https://github.com/SlightlyHappy/slightlyhappy.github.io/blob/master/images/IMG_0982.JPG?raw=true" />
+  </div>
+
+  <div class="grid-item">
+    <img src="https://github.com/SlightlyHappy/slightlyhappy.github.io/blob/master/images/IMG_1065.JPG?raw=true" />
+  </div>
+
+  <div class="grid-item">
+    <img src="https://github.com/SlightlyHappy/slightlyhappy.github.io/blob/master/images/IMG_1106.JPG?raw=true" />
+  </div>
+
+  <div class="grid-item">
+    <img src="https://github.com/SlightlyHappy/slightlyhappy.github.io/blob/master/images/IMG_1240.PNG?raw=true" />
+  </div>
+
+</div>
+
+<script>
+$(".grid").imagesLoaded(function() {
+    $(".grid").masonry({
+      itemSelector: ".grid-item"
+    });
+  });
+</script>
 </body>
+
 </html>
