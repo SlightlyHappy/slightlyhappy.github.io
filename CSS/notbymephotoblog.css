@@ -10,6 +10,26 @@ body {
     max-width: 100%;
 }
 
+header {
+    background-color: transparent;
+    padding: 15px 0;
+    text-align: left;
+    color: #FFF; /* White text color */
+    font-size: 1.0em;
+    font-family: 'Taviraj', serif;
+    padding: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
 /* Center things inside the grid */
 .grid {
     text-align: center;
@@ -81,3 +101,30 @@ body {
     50%{background-position:100% 100%}
     100%{background-position:0% 0%}
 }
+
+/* Updated style for the overlay/lightbox background */
+.lightbox-background {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* darker background */
+    backdrop-filter: blur(8px); /* adds blur effect */
+    z-index: 1000;
+    opacity: 0; /* start as transparent */
+    transition: opacity 0.4s ease; /* smooth transition */
+}
+
+/* Updated style for the expanded image in the lightbox */
+.lightbox-content img {
+    margin: 10% auto;
+    max-height: 80vh;
+    display: block;
+    transform: scale(0.7); /* start from a smaller size */
+    opacity: 0; /* start as transparent */
+    transition: transform 0.4s ease, opacity 0.4s ease; /* smooth transitions */
+}
+
+
