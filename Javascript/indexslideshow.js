@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
+    // Your slideshow code
     const imageUrls = [
         'https://i.redd.it/national-park-4k-3840x2160-by-a-i-v0-g4crddfnmt9a1.jpg?s=09b1d04542d7641ca8f15e7d41a4c8786926be97',
        'https://i.redd.it/stained-glass-waterfall-scene-4k-3840x2160-by-a-i-v0-go1ih058xtwa1.jpg?s=b61e042bc26509ad41b0c7082f1b8f4a5edad448',
@@ -36,4 +37,19 @@ document.addEventListener("DOMContentLoaded", function() {
     const styleElement = document.createElement('style');
     styleElement.innerHTML = keyframesCSS;
     document.head.appendChild(styleElement);
+
+    // Font-switching code
+    const fonts = [
+        'Barriecito', 'Caprasimo', 'Inconsolata', 'Josefin Sans', 'Bebas Neue', 'Rajdhani', 'Handjet', 'Dancing Script',
+        'Pacifico', 'Lobster', 'Caveat', 'IBM Plex Mono', 'Shadows Into Light', 'Indie Flower', 'Satisfy', 'Tulpen One',
+        'Kalam', 'Permanent Marker', 'Alumni Sans Inline One', 'Borel', 'Great Vibes'
+    ];
+    
+    let currentFontIndex = 0;
+    const spanElement = document.querySelector('section h1 span');
+    
+    setInterval(() => {
+        spanElement.style.fontFamily = fonts[currentFontIndex];
+        currentFontIndex = (currentFontIndex + 1) % fonts.length; // Loop over the fonts
+    }, 2000); // Change font every 2 seconds
 });
