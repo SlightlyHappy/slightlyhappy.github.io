@@ -8,7 +8,7 @@
 /*Apply the background slideshow animation */
 main::before {
     content: '';
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
@@ -122,4 +122,19 @@ header.header-animation {
 /* Add this to your existing CSS */
 main.main-animation {
     margin-top: 100px; /* Adjust the margin to match the header's height */
+}
+
+/* Style the about section */
+.about-section {
+    position: relative;
+    top: 900px;
+    text-align: center;
+    padding: 50px;
+    background-color: #333;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    max-width: 600px;
+    margin: 0 auto;
 }

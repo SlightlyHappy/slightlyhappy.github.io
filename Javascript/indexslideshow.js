@@ -1,5 +1,14 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // Your slideshow code
+
+    // Randomize the order of images
+    function shuffleArray(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+    }
+
+    //  slideshow code
     const imageUrls = [
         'https://i.redd.it/national-park-4k-3840x2160-by-a-i-v0-g4crddfnmt9a1.jpg?s=09b1d04542d7641ca8f15e7d41a4c8786926be97',
        'https://i.redd.it/stained-glass-waterfall-scene-4k-3840x2160-by-a-i-v0-go1ih058xtwa1.jpg?s=b61e042bc26509ad41b0c7082f1b8f4a5edad448',
@@ -14,7 +23,15 @@ document.addEventListener("DOMContentLoaded", function() {
       'https://i.redd.it/northern-lights-1920-1080-v0-x256oeqi9nib1.jpg?s=047872164fb4641722691fd4837c6b8e88cca7f6',
       'https://i.redd.it/night-sky-forests-and-mountains-5952x3264-v0-drtekja8qmib1.jpg?s=0e450b40a2f68d98184986c7f90624eb776125ed',
       'https://i.imgur.com/ezOgN0q.jpg',
+      'https://i.redd.it/lzex18njhtjb1.jpg',
+      'https://i.redd.it/7lx9aw3ypcjb1.jpg',
+      'https://i.redd.it/sv3ot16jm9jb1.jpg',
+      'https://i.redd.it/n6y1w3gu0bjb1.jpg',
+      'https://i.redd.it/t7ss77z3x6jb1.jpg',
+      'https://i.redd.it/9it4uvroz2jb1.jpg'
     ];
+
+    shuffleArray(imageUrls);
 
     const keyframeDuration = 10;
     const step = 100 / imageUrls.length;
