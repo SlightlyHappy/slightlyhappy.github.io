@@ -108,3 +108,18 @@ section button {
 section button:hover {
     background-color: #111;
 }
+
+
+header.header-animation {
+    position: fixed;
+    top: -100px; /* Start position above the viewport */
+    width: 100%;
+    background-color: #111; /* Match the button hover color */
+    transition: top 0.5s ease; /* Add a transition effect to the top property */
+    z-index: 1;
+}
+
+/* Add this to your existing CSS */
+main.main-animation {
+    margin-top: 100px; /* Adjust the margin to match the header's height */
+}

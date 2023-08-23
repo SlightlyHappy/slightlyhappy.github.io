@@ -52,4 +52,13 @@ document.addEventListener("DOMContentLoaded", function() {
         spanElement.style.fontFamily = fonts[currentFontIndex];
         currentFontIndex = (currentFontIndex + 1) % fonts.length; // Loop over the fonts
     }, 2000); // Change font every 2 seconds
+
+     // Animation code for sliding header
+     const header = document.querySelector("header");
+    
+     // After a short delay, slide the header down into view
+     setTimeout(() => {
+         header.style.top = "0";
+     }, 500); // Adjust the delay as needed
+
 });
