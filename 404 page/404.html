@@ -7,23 +7,31 @@
 
 
 <div>
-
-    
-
-    <p>sorry, but i'm still working on this page...</p>
+    <p style="font-size:12px;">credit to this animation goes to <a href ="https://codepen.io/Valgo"> Valgo</a>. Learnt this from them!</p>
     <a href = "../index.html">
-       <button>maybe you can back to home</button>
+       <button> you can back to home</button>
     </a>
-    <div class="box-not-found">
-      <h1 class="not-found-animation">404</h1>
-    </div>
-    
-    
-  
-    <script src="../404 page/404.js"></script>
-  
   </div>
 
-
+  <div id="container">
+	<span id="text1"></span>
+	<span id="text2"></span>
+  </div>
+  <!-- The SVG filter used to create the merging effect -->
+<svg id="filters">
+	<defs>
+		<filter id="threshold">
+			<!-- Basically just a threshold effect - pixels with a high enough opacity are set to full opacity, and all other pixels are set to completely transparent. -->
+			<feColorMatrix in="SourceGraphic"
+					type="matrix"
+					values="1 0 0 0 0
+									0 1 0 0 0
+									0 0 1 0 0
+									0 0 0 255 -140" />
+		</filter>
+	</defs>
+</svg>
+  
+<script src="../404 page/404.js"></script>
 
 </html>
