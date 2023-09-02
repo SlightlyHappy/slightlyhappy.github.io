@@ -36,10 +36,14 @@ p{
     overflow: hidden;
 }
 
-.scrolling-text {
+.scrolling-text-container {
     white-space: nowrap;
-    animation: scroll 20s linear infinite; /* Adjust the animation duration as needed */
-    transform: translateX(100%); /* Start off-screen to the right */
+    animation: scroll 15s linear infinite; /* Adjust the animation duration as needed */
+}
+
+.scrolling-text {
+    display: inline-block;
+    padding-right: 20px; /* Adjust the padding to create space between repetitions */
 }
 
 @keyframes scroll {
