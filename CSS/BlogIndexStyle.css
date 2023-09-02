@@ -18,6 +18,15 @@ p{
     margin-top: 0;
     margin-bottom: 20px;
 }
+a {
+    text-decoration: none; /* Remove underline */
+    color: #2f2f2f; /* Change the link color to blue (#3498db), you can choose any color you prefer */
+}
+
+/* Display the underline on hover */
+a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
 .head{
     text-align: center;
     position: relative;
