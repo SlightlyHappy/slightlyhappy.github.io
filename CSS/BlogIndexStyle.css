@@ -64,6 +64,10 @@ a:hover {
     }
 }
 
+.subhead:hover .scrolling-text-container {
+    animation-play-state: paused;
+}
+
 .content{
     font-size: 0;
     line-height: 0;
