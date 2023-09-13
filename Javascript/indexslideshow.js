@@ -24,7 +24,6 @@ document.addEventListener("DOMContentLoaded", function() {
       'https://i.imgur.com/ezOgN0q.jpg',
       'https://i.redd.it/7lx9aw3ypcjb1.jpg',
       'https://i.redd.it/sv3ot16jm9jb1.jpg',
-      'https://i.redd.it/n6y1w3gu0bjb1.jpg',
       'https://i.redd.it/t7ss77z3x6jb1.jpg',
       'https://i.redd.it/9it4uvroz2jb1.jpg'
     ];
