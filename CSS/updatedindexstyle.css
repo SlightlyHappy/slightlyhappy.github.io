@@ -63,6 +63,11 @@ header ul li a {
     transition: color 0.3s ease;
 }
 
+header ul li a:hover {
+    color: #E4B363; /* Change color on hover */
+}
+
+
 /* Style the welcome section */
 section {
     position: absolute;
