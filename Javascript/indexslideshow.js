@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function() {
     setInterval(() => {
         spanElement.style.fontFamily = fonts[currentFontIndex];
         currentFontIndex = (currentFontIndex + 1) % fonts.length; // Loop over the fonts
-    }, 2000); // Change font every 2 seconds
+    }, 180000); // Change font every 2 seconds
 
      // Animation code for sliding header
      const header = document.querySelector("header");
