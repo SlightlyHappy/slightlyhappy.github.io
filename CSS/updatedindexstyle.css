@@ -5,6 +5,29 @@
     box-sizing: border-box;
 }
 
+/* CSS for mobile devices */
+@media only screen and (max-width: 768px) {
+    /* Adjustments for smaller screens */
+    /* Example: Adjust the font size or layout for smaller screens */
+    body {
+        font-size: 14px;
+    }
+
+    /* Adjust navigation styles */
+    /* Example: Convert the menu into a dropdown for mobile */
+    header ul {
+        /* Apply styles suitable for mobile navigation */
+        /* e.g., display: flex; and flex-direction: column; */
+    }
+
+    /* Adjust section styles */
+    /* Example: Modify the layout or spacing for smaller screens */
+    section {
+        /* Add appropriate styles */
+    }
+}
+
+
 /*Apply the background slideshow animation */
 main::before {
     content: '';
