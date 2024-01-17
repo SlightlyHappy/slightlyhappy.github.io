@@ -5,27 +5,28 @@
         <link href="../CSS/modernresumestyle.css" rel = "stylesheet">
         <script src = "https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
         <script src = "../Javascript/modernresume.js"></script>
-        <script>
+	    
+        // <script>
           // Function to check if the aspect ratio is approximately 16:9
-          function is16by9AspectRatio() {
-              const aspectRatio = window.innerWidth / window.innerHeight;
-              return Math.abs(aspectRatio - (16 / 9)) < 0.1;
-          }
+         //function is16by9AspectRatio() {
+           //   const aspectRatio = window.innerWidth / window.innerHeight;
+             // return Math.abs(aspectRatio - (16 / 9)) < 0.1;
+          //}
   
           // Function to redirect to the specified HTML file for mobile devices
-          function redirectIfMobile() {
-              if (is16by9AspectRatio()) {
+          //function redirectIfMobile() {
+            //  if (is16by9AspectRatio()) {
                   // Redirect to the specified HTML file for 16:9 aspect ratio
-                  window.location.href ="mobile_resume.html";
-              }
-          }
+              //    window.location.href ="mobile_resume.html";
+              //}
+         // }
   
           // Redirect to the specified HTML file on page load
-          window.addEventListener('load', redirectIfMobile);
+          //window.addEventListener('load', redirectIfMobile);
   
           // Redirect on window resize (for responsiveness)
-          window.addEventListener('resize', redirectIfMobile);
-      </script>
+          //window.addEventListener('resize', redirectIfMobile);
+      //</script>
 
     </head>
     <body>
