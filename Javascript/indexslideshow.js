@@ -23,7 +23,6 @@ document.addEventListener("DOMContentLoaded", function() {
       'https://i.redd.it/night-sky-forests-and-mountains-5952x3264-v0-drtekja8qmib1.jpg?s=0e450b40a2f68d98184986c7f90624eb776125ed',
       'https://i.imgur.com/ezOgN0q.jpg',
       'https://i.redd.it/7lx9aw3ypcjb1.jpg',
-      'https://i.redd.it/sv3ot16jm9jb1.jpg',
       'https://i.redd.it/t7ss77z3x6jb1.jpg',
       'https://i.redd.it/9it4uvroz2jb1.jpg'
     ];
