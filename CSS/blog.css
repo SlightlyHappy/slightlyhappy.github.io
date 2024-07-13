@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400;1,500&family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap");
+
+* {
+    outline: none;
+    box-sizing: border-box;
+}
+
+html {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    --title-font: "Space Grotesk", sans-serif;
+    --subtitle-font: "Inter", sans-serif;
+    --italic-font: "Playfair Display", serif;
+    --blog-bg: #e9e6e4;
+    --body-bg: #121418;
+    --title-color: #121418;
+    --subtitle-color: #161419;
+    --border-color: #94918f;
+
+    background-color: var(--body-bg);
+    display: flex;
+    font-family: var(--subtitle-font);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 2em;
+    font-weight: 400;
+    height: 100vh;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        padding: 0;
+    }
+}
+
+.blog {
+    background-color: var(--blog-bg);
+    max-width: 1350px;
+    display: grid;
+    height: 90vh;
+    max-height: 800px;
+    overflow: hidden;
+    grid-template-columns: 15% 20% 35% 30%;
+    grid-template-rows: 100%;
+    width: 100%;
+    padding: 40px 4px;
+    position: relative;
+}
+
+@media screen and (max-width: 1030px) {
+    .blog {
+        grid-template-columns: 20% 50% 30%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .blog {
+        grid-template-columns: 25% 75%;
+        width: 100%;
+        max-width: none;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .blog {
+        grid-template-columns: 100%;
+    }
+}
+
+.blog-part {
+    padding: 0 20px;
+}
+
+.blog-part:not(:last-child) {
+    border-right: 1px solid var(--border-color);
+}
+
+.blog-menu {
+    font-size: 22px;
+    text-decoration: none;
+    color: var(--subtitle-color);
+    display: flex;
+    letter-spacing: -0.5px;
+    align-items: center;
+}
+
+@media screen and (max-width: 1260px) {
+    .blog-menu {
+        font-size: 1.6vw;
+    }
+}
+
+.blog-menu svg {
+    width: 22px;
+    margin-left: 4px;
+}
+
+.blog-menu + .blog-menu {
+    margin-top: 24px;
+}
+
+.blog-menu.mention {
+    margin-top: auto;
+    font-size: 19px;
+}
+
+@media screen and (max-width: 1260px) {
+    .blog-menu.mention {
+        font-size: 

@@ -91,6 +91,7 @@ body {
     display: flex;
     letter-spacing: -0.5px;
     align-items: center;
+    position: relative;
 }
 
 @media screen and (max-width: 1260px) {
@@ -373,9 +374,11 @@ marquee span:before {
     align-items: center;
     justify-content: space-between;
     border-bottom: 1px solid var(--border-color);
-    margin-bottom: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
     margin-top: 100px;
+    margin-bottom: 16px;
+    font-size: 30px;
+    font-family: var(--title-font);
     letter-spacing: -1px;
 }
 
@@ -440,57 +443,46 @@ marquee span:before {
 }
 
 .blog-menu {
-    @media screen and (max-width: 1030px) {
-        display: none;
-    }
+    position: relative;
+}
+
+.blog-dropdown {
+    display: none; /* Hide dropdown initially */
+    position: absolute;
+    top: 100%; /* Remove the additional 4px spacing */    left: 0;
+    margin-top: -1px; /* Adjust the value to your preference */
+    background-color: var(--blog-bg); /* Match background color */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Match box shadow */
+    z-index: 10; /* Ensure dropdown appears above other content */
+    min-width: 200px; /* Adjust width as needed */
+    padding: 12px 0;
+    border-radius: 4px;
+    opacity: 0; /* Initially invisible */
+    transition: opacity 1s ease-in-out, visibility 1s ease-in-out;  /* Increased transition duration to 1 second */
+}
+
+.blog-menu:hover .blog-dropdown {
+    display: block; /* Show dropdown when menu is hovered */
+    opacity: 1; /* Make dropdown visible */
+}
+
+.blog-dropdown li {
+    list-style-type: none; /* Remove default list styling */
+    margin: 6px 0;
+}
+
+.blog-dropdown li a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: var(--subtitle-color); /* Match text color */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.blog-dropdown li a:hover {
+    background-color: #f0f0f0; /* Hover background color */
 }
 
 ::-webkit-scrollbar {
     display: none;
-}
-
-.circle {
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    border-radius: 50%;
-    background-color: var(--body-bg);
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    color: var(--blog-bg);
-    padding: 20px;
-    text-align: center;
-    margin-top: 40px;
-}
-
-.circle-title {
-    font-size: 24px;
-    font-weight: 600;
-    margin-bottom: 12px;
-    font-family: var(--title-font);
-}
-
-@media screen and (max-width: 1030px) {
-    .circle-title {
-        display: none;
-    }
-}
-
-.circle-subtitle {
-    max-width: 30ch;
-    font-size: 14px;
-    line-height: 1.3;
-    margin-bottom: 16px;
-}
-
-.circle-footer {
-    font-family: var(--italic-font);
-    font-size: 30px;
-}
-
-.blog-is-sticky {
-    @media screen and (max-width: 560px) {
-        display: none;
-    }
 }
