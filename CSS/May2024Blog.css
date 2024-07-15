@@ -486,3 +486,44 @@ marquee span:before {
 ::-webkit-scrollbar {
     display: none;
 }
+
+.circle {
+    width: 300px;
+    height: 300px;
+    background-color: var(--subtitle-color); /* Adjust color as needed */
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    color: var(--blog-bg); /* Adjust text color as needed */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    margin-left: 20px; /* Move the circle further to the right */
+    margin-top: 20px; /* Move the circle further down */
+}
+
+.circle:hover {
+    transform: scale(1.05); /* Slightly enlarges the circle on hover */
+}
+
+.circle-title {
+    font-size: 20px;
+    font-family: var(--title-font);
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.circle-subtitle {
+    font-size: 16px;
+    font-family: var(--subtitle-font);
+    margin-bottom: 10px;
+}
+
+.circle-footer {
+    font-size: 14px;
+    font-family: var(--subtitle-font);
+    font-style: italic;
+}
