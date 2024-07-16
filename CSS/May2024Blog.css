@@ -458,7 +458,7 @@ marquee span:before {
     padding: 12px 0;
     overflow-y: auto; /* Enable vertical scrolling */
     border-radius: 4px;
-    max-height: 300px;
+    max-height: 310px;
     opacity: 0; /* Initially invisible */
     transition: opacity 1s ease-in-out, visibility 1s ease-in-out;  /* Increased transition duration to 1 second */
 }
