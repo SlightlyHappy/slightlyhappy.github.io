@@ -456,9 +456,29 @@ marquee span:before {
     z-index: 10; /* Ensure dropdown appears above other content */
     min-width: 200px; /* Adjust width as needed */
     padding: 12px 0;
+    overflow-y: auto; /* Enable vertical scrolling */
     border-radius: 4px;
+    max-height: 300px;
     opacity: 0; /* Initially invisible */
     transition: opacity 1s ease-in-out, visibility 1s ease-in-out;  /* Increased transition duration to 1 second */
+}
+
+/* Custom scrollbar styles */
+.blog-dropdown::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+}
+
+.blog-dropdown::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Background color of the scrollbar track */
+}
+
+.blog-dropdown::-webkit-scrollbar-thumb {
+    background: #888; /* Color of the scrollbar thumb */
+    border-radius: 4px; /* Round the corners of the scrollbar thumb */
+}
+
+.blog-dropdown::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Hover color of the scrollbar thumb */
 }
 
 .blog-menu:hover .blog-dropdown {
