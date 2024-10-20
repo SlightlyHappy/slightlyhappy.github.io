@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>July 31, 2024 PDF Viewer</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #1f1f1f, #3f3f3f);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            text-align: center;
+            width: 90%;
+            max-width: 1000px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .pdf-container {
+            position: relative;
+            width: 100%;
+            padding-top: 141.4%; /* 1:1.414 aspect ratio (A4 paper) */
+            overflow: hidden;
+        }
+
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 2px solid #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .back-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            background-color: rgba(255, 255, 255, 0.2);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <a href="https://slightlyhappy.github.io/Blog/May2024Blog.html" class="back-button">Back</a>
+    <div class="container">
+        <h1>There's so much to change... I get disheartened sometimes - but India is beautiful and deserves to be restored to it's glory.</h1>
+        <div class="pdf-container">
+            <iframe src="../What is wrong with India/WhatsWrongwithIndia.pdf" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+</body>
+</html>
