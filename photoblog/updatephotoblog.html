@@ -1,22 +1,39 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <link rel="stylesheet" href="../CSS/updatephotoblog.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Image Gallery</title>
+    <link rel="stylesheet" href="../CSS/updatephotoblog.css"> 
+    <style>
+        .row {
+            margin: 15px;
+        }
+    </style>
 </head>
+<body>
 
-<a href="../404 page/404.html" class="sun-btn" aria-label="Sun Link"></a>
+<div class="container">
+    <div class="row" id="image-gallery">
+        {% for image_url in site.data.reddit_images %}
+            <a href="{{ image_url }}" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+                <img src="{{ image_url }}" class="img-fluid rounded">
+            </a>
+        {% endfor %}
+    </div> 
+</div>
 
-<div class = "text-container">
-    Click on the sun for some of my art, the anywhere else for art I've found/collected. 
-  </div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script> 
 
-<!-- Link for the wave -->
-<a href="../photoblog/NotByMe/notbyme.html" class="wave-btn" aria-label="Wave Link">
-  <div class="ocean">
-    <div class="wave"></div>
-    <div class="wave"></div>
-  </div>
-</a>
+<script>
+    $(document).on("click", '[data-toggle="lightbox"]', function(event) {
+        event.preventDefault();
+        $(this).ekkoLightbox();
+    });
+</script>
 
-
+</body>
 </html>
