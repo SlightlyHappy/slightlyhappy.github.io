@@ -1,0 +1,31 @@
+name: Update Photo Gallery
+
+on:
+  schedule:
+    - cron: '*/15 * * * *'  #every 15 minutes
+
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: pip install beautifulsoup4 pyyaml requests
+
+      - name: Fetch image URLs from Reddit
+        run: python fetch_reddit_image_urls.py
+
+      - name: Build website
+        run: jekyll build
+
+      - name: Deploy to GitHub Pages
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: '_site'
