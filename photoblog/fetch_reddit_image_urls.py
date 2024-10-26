@@ -6,7 +6,7 @@ import yaml
 username = "YOUR_REDDIT_USERNAME"
 
 # Fetch your Reddit profile page
-url = f"https://www.reddit.com/user/{username}/"
+url = f"https://www.reddit.com/r/photography/"
 headers = {'User-Agent': 'Mozilla/5.0'} 
 response = requests.get(url, headers=headers)
 
